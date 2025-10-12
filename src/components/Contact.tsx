@@ -31,10 +31,10 @@ const Contact = () => {
             <div className="flex items-center gap-4">
               <Phone className="h-6 w-6 text-blue-400" />
               <a
-                href="tel:+92328482228"
+                href="tel:+923284822228"
                 className="text-blue-100 hover:text-blue-300 transition-colors duration-200"
               >
-                +92 328 482228
+                +92 328 4822228
               </a>
             </div>
 
