@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="text-center space-y-2">
             <p className="text-xl font-semibold font-['Space_Grotesk']">Muhammad Mikaal Amjad</p>
             <p className="text-muted-foreground font-['Inter']">
-              Software Engineer | Data & Cloud Solutions Developer | Python Specialist
+              Software Engineer
             </p>
           </div>
 
