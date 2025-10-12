@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  },);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#0A1628]/80 backdrop-blur-lg border-b border-blue-900/40 z-50">

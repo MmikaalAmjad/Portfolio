@@ -1,4 +1,4 @@
-import { Briefcase, Code2, Database, Cloud } from "lucide-react";
+import {  Code2, Cloud } from "lucide-react";
 
 const experiences = [
 {
