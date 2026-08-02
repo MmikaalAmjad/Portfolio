@@ -80,44 +80,51 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-24 px-6 bg-[#0A1628] text-white">
-      <div className="container mx-auto max-w-6xl">
+    <section id="certifications" className="py-24 px-6 bg-[#0A1628] text-white relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold font-grotesk text-blue-100">
+          <span className="inline-block text-xs sm:text-sm font-semibold tracking-[0.2em] text-blue-400 uppercase font-inter">
+            Credentials
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold font-grotesk bg-gradient-to-b from-blue-50 to-blue-300 bg-clip-text text-transparent">
             Certifications
           </h2>
-          <p className="text-blue-300 text-lg max-w-2xl mx-auto font-inter">
+          <p className="text-blue-300/80 text-lg max-w-2xl mx-auto font-inter">
             Verified achievements showcasing my expertise in Power BI, data analytics, and Python programming.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="group border border-blue-900/40 bg-[#101C34] rounded-xl p-6 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300"
+              className="group relative rounded-xl p-[1px] bg-gradient-to-b from-white/10 to-white/0 hover:from-blue-400/40 hover:to-blue-600/10 transition-all duration-500"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-blue-900/40 rounded-lg">
-                  <Award className="h-6 w-6 text-yellow-400" />
+              <div className="h-full bg-[#0D1A30]/90 backdrop-blur-sm rounded-xl p-6 flex flex-col transition-all duration-500 group-hover:shadow-xl group-hover:shadow-blue-950/50 group-hover:-translate-y-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 bg-gradient-to-br from-blue-900/60 to-blue-800/20 border border-white/5 rounded-lg">
+                    <Award className="h-6 w-6 text-yellow-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-100 leading-snug">
+                      {cert.title}
+                    </h3>
+                    <p className="text-sm text-blue-400">{cert.issuer}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-100">
-                    {cert.title}
-                  </h3>
-                  <p className="text-sm text-blue-400">{cert.issuer}</p>
-                </div>
-              </div>
-              <p className="text-sm text-blue-300 mb-4">{cert.date}</p>
+                <p className="text-sm text-blue-300/70 mb-4">{cert.date}</p>
 
-              <button
-                onClick={() => window.open(cert.link, "_blank")}
-                className="mt-auto px-5 py-2 rounded-lg bg-blue-800 hover:bg-blue-700 text-blue-100 text-sm font-medium transition-all duration-300"
-              >
-                View Certificate
-              </button>
+                <button
+                  onClick={() => window.open(cert.link, "_blank")}
+                  className="mt-auto px-5 py-2 rounded-lg bg-white/[0.04] border border-white/10 hover:bg-blue-600 hover:border-blue-600 text-blue-100 text-sm font-medium transition-all duration-300 self-start"
+                >
+                  View Certificate
+                </button>
+              </div>
             </div>
           ))}
         </div>

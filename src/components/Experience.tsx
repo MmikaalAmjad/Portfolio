@@ -27,10 +27,13 @@ const Experience = () => {
       <div className="container mx-auto max-w-5xl">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold font-grotesk text-blue-100">
+          <span className="inline-block text-xs sm:text-sm font-semibold tracking-[0.2em] text-blue-400 uppercase font-inter">
+            Career
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold font-grotesk bg-gradient-to-b from-blue-50 to-blue-300 bg-clip-text text-transparent">
             Experience
           </h2>
-          <p className="text-blue-300 text-lg max-w-2xl mx-auto font-inter">
+          <p className="text-blue-300/80 text-lg max-w-2xl mx-auto font-inter">
             A journey through my hands-on experience and technical growth.
           </p>
         </div>
@@ -46,21 +49,23 @@ const Experience = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Timeline dot */}
-                <div className="absolute -left-[1.2rem] top-2 w-5 h-5 rounded-full bg-blue-800 border-2 border-blue-400 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="absolute -left-[1.65rem] top-2 w-5 h-5 rounded-full bg-gradient-to-br from-blue-400 to-blue-700 border-2 border-blue-300 shadow-glow group-hover:scale-125 transition-transform duration-300"></div>
 
                 {/* Card */}
-                <div className="bg-[#101C34] border border-blue-900/30 rounded-xl p-6 shadow-lg hover:shadow-blue-900/30 transition-all duration-300">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-3 rounded-lg bg-blue-900/40">
-                      <Icon className="h-6 w-6 text-blue-300" />
+                <div className="relative rounded-xl p-[1px] bg-gradient-to-b from-white/10 to-white/0 group-hover:from-blue-400/40 group-hover:to-blue-600/10 transition-all duration-500">
+                  <div className="bg-[#0D1A30]/90 backdrop-blur-sm rounded-xl p-6 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-blue-950/50 transition-all duration-500">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-3 rounded-lg bg-gradient-to-br from-blue-900/60 to-blue-800/20 border border-white/5">
+                        <Icon className="h-6 w-6 text-blue-300" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-blue-100">{exp.role}</h3>
+                        <p className="text-sm text-blue-400">{exp.company}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-blue-100">{exp.role}</h3>
-                      <p className="text-sm text-blue-400">{exp.company}</p>
-                    </div>
+                    <p className="text-sm text-blue-300/80 mb-2">{exp.duration}</p>
+                    <p className="text-blue-200/90 text-sm leading-relaxed">{exp.description}</p>
                   </div>
-                  <p className="text-sm text-blue-300 mb-2">{exp.duration}</p>
-                  <p className="text-blue-200 text-sm leading-relaxed">{exp.description}</p>
                 </div>
               </div>
             );

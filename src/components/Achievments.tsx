@@ -13,20 +13,23 @@ const Achievements = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold font-grotesk text-blue-100">
+          <span className="inline-block text-xs sm:text-sm font-semibold tracking-[0.2em] text-blue-400 uppercase font-inter">
+            Recognition
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold font-grotesk bg-gradient-to-b from-blue-50 to-blue-300 bg-clip-text text-transparent">
             Achievements
           </h2>
-          <p className="text-blue-300 text-lg max-w-2xl mx-auto font-inter">
+          <p className="text-blue-300/80 text-lg max-w-2xl mx-auto font-inter">
             Some highlights from my journey in technology and innovation.
           </p>
         </div>
 
         {/* Achievements Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="relative rounded-xl overflow-hidden group cursor-pointer border border-blue-900/30 hover:shadow-lg hover:shadow-blue-900/40 transition-all duration-500"
+              className="relative rounded-xl overflow-hidden group cursor-pointer border border-white/10 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-950/50 transition-all duration-500"
             >
               <img
                 src={achievement.image}

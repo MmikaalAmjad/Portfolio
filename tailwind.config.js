@@ -27,6 +27,7 @@ module.exports = {
       animation: {
         "fade-in-up": "fadeInUp 0.8s ease-out",
         float: "float 6s ease-in-out infinite",
+        "pulse-slow": "pulseSlow 4s ease-in-out infinite",
       },
       keyframes: {
         fadeInUp: {
@@ -36,6 +37,10 @@ module.exports = {
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
+        },
+        pulseSlow: {
+          "0%, 100%": { opacity: 0.5 },
+          "50%": { opacity: 0.9 },
         },
       },
     },

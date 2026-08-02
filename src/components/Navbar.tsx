@@ -42,14 +42,14 @@ const Navbar = () => {
   },);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#0A1628]/80 backdrop-blur-lg border-b border-blue-900/40 z-50">
+    <nav className="fixed top-0 left-0 w-full bg-[#0A1628]/70 backdrop-blur-xl border-b border-white/10 z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <h1
           onClick={() => scrollToSection("hero")}
           className="text-2xl font-bold text-blue-100 cursor-pointer font-grotesk"
         >
-          Mikaal<span className="text-blue-400">.</span>
+          Mikaal<span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">.</span>
         </h1>
 
         {/* Desktop Menu */}
@@ -58,10 +58,10 @@ const Navbar = () => {
             <li
               key={section}
               onClick={() => scrollToSection(section)}
-              className={`cursor-pointer transition-colors duration-300 ${
+              className={`relative cursor-pointer transition-colors duration-300 pb-1 ${
                 activeSection === section
-                  ? "text-blue-400 font-medium"
-                  : "text-blue-200 hover:text-blue-400"
+                  ? "text-blue-300 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full"
+                  : "text-blue-200/80 hover:text-blue-300"
               }`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}

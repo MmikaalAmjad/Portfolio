@@ -116,51 +116,59 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-6 bg-[#0A1628] text-white">
-      <div className="container mx-auto">
+    <section id="skills" className="py-24 px-6 bg-[#0A1628] text-white relative overflow-hidden">
+      {/* Ambient glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold font-grotesk text-blue-100">
+          <span className="inline-block text-xs sm:text-sm font-semibold tracking-[0.2em] text-blue-400 uppercase font-inter">
+            Toolkit
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold font-grotesk bg-gradient-to-b from-blue-50 to-blue-300 bg-clip-text text-transparent">
             Technical Skills
           </h2>
-          <p className="text-blue-300 text-lg max-w-2xl mx-auto font-inter">
+          <p className="text-blue-300/80 text-lg max-w-2xl mx-auto font-inter">
             My toolkit includes modern technologies for building scalable and intelligent systems.
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
               <div
                 key={category.title}
-                className="group border border-blue-900/30 bg-[#101C34] rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/30"
+                className="group relative rounded-xl p-[1px] bg-gradient-to-b from-white/10 to-white/0 hover:from-blue-400/40 hover:to-blue-600/10 transition-all duration-500"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 rounded-lg bg-blue-900/40">
-                    <Icon className="h-6 w-6 text-blue-300" />
-                  </div>
-                  <h3 className="text-xl font-semibold font-grotesk text-blue-100">
-                    {category.title}
-                  </h3>
-                </div>
-
-                {/* Icons Grid */}
-                <div className="flex flex-wrap gap-5 justify-center md:justify-start">
-                  {category.skills.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="flex flex-col items-center justify-center w-16 h-16 bg-blue-950/30 rounded-lg hover:bg-blue-800/40 transition-all duration-300 hover:scale-110"
-                      title={skill.name}
-                    >
-                      <div className="text-3xl text-blue-400 group-hover:text-blue-300 transition-colors duration-200">
-                        {skill.icon}
-                      </div>
-                      <p className="text-xs text-blue-300 mt-1 font-inter">{skill.name}</p>
+                <div className="h-full bg-[#0D1A30]/90 backdrop-blur-sm rounded-xl p-6 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-blue-950/50 group-hover:-translate-y-1">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-lg bg-gradient-to-br from-blue-900/60 to-blue-800/20 border border-white/5">
+                      <Icon className="h-6 w-6 text-blue-300" />
                     </div>
-                  ))}
+                    <h3 className="text-xl font-semibold font-grotesk text-blue-100">
+                      {category.title}
+                    </h3>
+                  </div>
+
+                  {/* Icons Grid */}
+                  <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                    {category.skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="flex flex-col items-center justify-center w-16 h-16 bg-white/[0.03] border border-white/5 rounded-lg hover:bg-blue-500/10 hover:border-blue-400/30 transition-all duration-300 hover:scale-110"
+                        title={skill.name}
+                      >
+                        <div className="text-2xl text-blue-400 group-hover:text-blue-300 transition-colors duration-200">
+                          {skill.icon}
+                        </div>
+                        <p className="text-[10px] text-blue-300/80 mt-1 font-inter text-center leading-tight px-1">{skill.name}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             );
