@@ -2,11 +2,11 @@ import {  Code2, Cloud } from "lucide-react";
 
 const experiences = [
 {
-    role: "Associate Software Engineer",
+    role: "Software Engineer",
     company: "DEVSINC",
-    duration: "Apr 2025- Present",
+    duration: "Apr 2025 - Present",
     description:
-      "Worked on geospacial data, python backend, fastapi, Azure services (Email, Blob storage, Devops, Data Factory), MSSQL, Apache Airflow, Neo4j",
+      "Building production systems for US-based enterprise clients across backend services, data engineering, and frontend development — geospatial data pipelines, AI-integrated platforms, and graph database architectures. Working with FastAPI, Django REST Framework, Apache Airflow, Neo4j, MSSQL, PostgreSQL, and Azure services (Blob Storage, Data Factory, Communication Services, Entra ID, DevOps Pipelines).",
     icon: Cloud,
   },
   {

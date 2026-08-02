@@ -14,6 +14,15 @@ import {
   SiScikitlearn,
   SiQgis,
   SiFirebase,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPostgresql,
+  SiRedis,
+  SiCelery,
+  SiAmazonwebservices,
+  SiOpenai,
+  SiAnthropic,
 } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 
@@ -49,10 +58,12 @@ const skillCategories = [
     icon: Code2,
     skills: [
       { name: "FastAPI", icon: <SiFastapi /> },
+      { name: "Django REST", icon: <SiDjango /> },
       { name: "Node.js", icon: <SiNodedotjs /> },
       { name: "Express", icon: <SiExpress /> },
-      { name: "Django", icon: <SiDjango /> },
+      { name: "Celery", icon: <SiCelery /> },
       { name: "Python", icon: <SiPython /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
       { name: "Java", icon: <DiJava /> },
     ],
   },
@@ -60,17 +71,21 @@ const skillCategories = [
     title: "Frontend Development",
     icon: Layout,
     skills: [
+      { name: "Next.js 15", icon: <SiNextdotjs /> },
       { name: "React", icon: <SiReact /> },
       { name: "React Native", icon: <SiReacthookform /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     ],
   },
   {
     title: "Databases",
     icon: Database,
     skills: [
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "SQL Server", icon: <SiMysql /> },
       { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "MySQL", icon: <SiMysql /> },
       { name: "Neo4j", icon: <SiNeo4J /> },
+      { name: "Redis", icon: <SiRedis /> },
       { name: "Firebase", icon: <SiFirebase /> },
     ],
   },
@@ -81,16 +96,18 @@ const skillCategories = [
     { name: "Docker", icon: <SiDocker /> },
     { name: "Apache Airflow", icon: <SiApacheairflow /> },
     { name: "Microsoft Azure", icon: <AzureIcon className="w-6 h-6 text-blue-400" /> },
-    
+    { name: "AWS", icon: <SiAmazonwebservices /> },
   ],
 },
 
 {
-  title: "Data & Analytics",
+  title: "AI / ML & Data",
   icon: BarChart3,
   skills: [
-    { name: "Power BI", icon: <PowerBIIcon className="w-6 h-6 text-blue-400" /> },
+    { name: "Anthropic SDK", icon: <SiAnthropic /> },
+    { name: "OpenAI API", icon: <SiOpenai /> },
     { name: "Machine Learning", icon: <SiScikitlearn /> },
+    { name: "Power BI", icon: <PowerBIIcon className="w-6 h-6 text-blue-400" /> },
     { name: "Geospatial", icon: <SiQgis /> },
   ],
 },

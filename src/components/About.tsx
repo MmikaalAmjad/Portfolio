@@ -31,16 +31,16 @@ const About = () => {
           </h2>
 
           <p className="text-lg text-blue-200 leading-relaxed font-inter">
-            Driven and versatile <span className="text-blue-400 font-semibold">Software Engineer</span>,
-            passionate about contributing to impactful projects in dynamic environments.
-            I’m eager to apply my expertise in backend development, database management,
-            and software design to craft innovative and scalable solutions.
+            Full-stack <span className="text-blue-400 font-semibold">Software Engineer at Devsinc</span>,
+            building production systems across backend services, data engineering, and frontend
+            development. I've shipped geospatial data pipelines, AI-integrated platforms, graph
+            database architectures, and end-to-end web applications for US-based enterprise clients.
           </p>
 
           <p className="text-lg text-blue-200 leading-relaxed font-inter">
-            I’m deeply motivated by problem-solving and the pursuit of technical excellence.
-            My approach combines analytical thinking, clean architecture, and collaborative teamwork
-            to deliver efficient, reliable, and user-centric software.
+            I care about clean architecture, systems that don't break at scale, and code that
+            future-me doesn't have to apologise for. My approach combines analytical thinking,
+            clean design, and collaborative teamwork to deliver efficient, reliable software.
           </p>
 
           <p className="text-lg text-blue-200 leading-relaxed font-inter">

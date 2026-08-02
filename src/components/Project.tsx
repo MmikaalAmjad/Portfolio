@@ -2,6 +2,34 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "GeoSphere",
+    description:
+      "Geospatial data visualisation platform with multi-source ingestion and interactive mapping.",
+    tech: ["Next.js", "Python", "Google Maps API"],
+    github: "https://github.com/MmikaalAmjad",
+  },
+  {
+    title: "NCAA Analytics",
+    description:
+      "Live NCAA football data analytics dashboard with real-time statistics and insights.",
+    tech: ["Python", "FastAPI", "Next.js 15", "Docker"],
+    github: "https://github.com/mikaalamjad-dev/football-suggestion",
+  },
+  {
+    title: "NutriSuggest",
+    description:
+      "AI-powered personalised meal planning engine driven by an LLM pipeline.",
+    tech: ["FastAPI", "Next.js", "LLM"],
+    github: "https://github.com/mikaalamjad-dev/meal-suggestion",
+  },
+  {
+    title: "Multi-Source Ingestion",
+    description:
+      "Financial data pipeline with automated ETL orchestration across multiple data sources.",
+    tech: ["Python", "Apache Airflow", "PostgreSQL"],
+    github: "https://github.com/mikaalamjad-dev/multi-source-data-ingestion",
+  },
+  {
     title: "Zoom Autos",
     description:
       "A responsive car delivery and transport platform featuring a dynamic booking system, customer reviews, and real-time vehicle tracking across the UK.",
