@@ -14,7 +14,7 @@ const About = () => {
         ></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center gap-12">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center justify-center gap-12">
         {/* Profile Image */}
         <div className="flex-shrink-0">
           <img
