@@ -3,6 +3,12 @@ import { Award } from "lucide-react";
 const certifications = [
   // Power BI & Data
   {
+    title: "Neo4j & GenerativeAI Fundamentals",
+    issuer: "Neo4j",
+    date: "Aug 2, 2026",
+    link: "/Neo4j & GenerativeAI Fundamentals.pdf",
+  },
+  {
     title: "Harnessing the Power of Data with Power BI",
     issuer: "Coursera",
     date: "Aug 7, 2024",
