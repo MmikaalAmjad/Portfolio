@@ -109,7 +109,7 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </motion.a>
               <motion.a
-                href="/Muhammad Mikaal Amjad Resume.pdf"
+                href="/Muhammad Mikaal Amjad CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, y: -2 }}
